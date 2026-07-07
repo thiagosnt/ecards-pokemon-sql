@@ -40,8 +40,8 @@ O repositório demonstra, de forma prática, como a Inteligência Artificial pod
 
 ## 📁 Estrutura do Projeto
 
-A organização do projeto segue uma separação clara entre criação, semeadura e consultas, facilitando a manutenção e leitura:
-
+```markdown
+```text
 📦 e-cards-sql
  ┣ 📂 db_scripts
  ┃ ┣ 📂 tables
