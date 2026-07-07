@@ -60,7 +60,9 @@ A organização do projeto segue uma separação clara entre criação, semeadur
  ┗ 📄 README.md
    ```bash
 
-🗂️ Modelo de Dados
+---
+
+## 🗂️ Modelo de Dados
 O banco de dados é composto pelas seguintes tabelas:
 
 tbl_collections → Coleções de cartas
@@ -78,7 +80,9 @@ tbl_cards.type_id → tbl_types.id
 
 tbl_cards.stage_id → tbl_stages.id
 
-🤖 Uso do Microsoft Copilot
+---
+
+## 🤖 Uso do Microsoft Copilot
 Durante o desenvolvimento, o Microsoft Copilot foi utilizado diretamente no VS Code para:
 
 Sugerir consultas SELECT.
@@ -93,7 +97,9 @@ Auxiliar na separação de responsabilidades dos scripts.
 
 ⚠️ Nota: O Copilot foi usado como um apoio de produtividade, e não como substituto do raciocínio lógico ou do conhecimento fundamental em SQL.
 
-🔍 Exemplos de Consultas SQL
+---
+
+## 🔍 Exemplos de Consultas SQL
 🃏 Consulta completa (Cartas com seus relacionamentos)
 SQL
 SELECT
@@ -112,7 +118,10 @@ JOIN tbl_collections col ON col.id = c.collection_id
 JOIN tbl_types t ON t.id = c.type_id
 JOIN tbl_stages s ON s.id = c.stage_id
 ORDER BY col.collectionSetName, c.name;
-📦 Contagem de cartas por coleção
+
+---
+
+## 📦 Contagem de cartas por coleção
 SQL
 SELECT
     col.collectionSetName,
@@ -134,37 +143,14 @@ OR NOT EXISTS (
 OR NOT EXISTS (
     SELECT 1 FROM tbl_stages s WHERE s.id = c.stage_id
 );
-🚀 Como Executar
-Clone o repositório:
 
-Bash
-git clone [https://github.com/](https://github.com/)[SeuUsuario]/ecards-pokemon-sql.git
-Execute os scripts no seu SGBD (PostgreSQL) na seguinte ordem:
+---
 
-tables/ → Criação das tabelas
 
-seeds/ → Inserção de dados (Carga inicial)
-
-selects/ → Consultas e validação
-
-(Opcional) Para juntar todos os arquivos de inserção em um só, utilize o script PowerShell:
-
-PowerShell
-cd db_scripts/seeds
-./to_migration.ps1
-✅ Resultados Alcançados
-Semeadura de dados validada com sucesso.
-
-Relacionamentos consistentes entre tabelas, garantindo a integridade referencial.
-
-Consultas estruturadas, organizadas e prontas para reutilização.
-
-Aumento expressivo na produtividade com o apoio de Inteligência Artificial generativa.
-
-📚 Conclusão
+## 📚 Conclusão
 Este projeto demonstra na prática como o Microsoft Copilot pode ser um forte aliado no desenvolvimento de bancos de dados relacionais. Ele auxilia na escrita de consultas mais rápidas, legíveis e seguras, otimizando o tempo do desenvolvedor, especialmente em cenários educacionais e de prototipagem como propostos no Bootcamp da DIO.
 
-👨‍💻 Autor
+## 👨‍💻 Autor
 Projeto desenvolvido para fins educacionais no Bootcamp DIO.
 📌 Fique à vontade para clonar, estudar e evoluir este repositório!
 
