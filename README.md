@@ -42,7 +42,6 @@ O repositório demonstra, de forma prática, como a Inteligência Artificial pod
 
 A organização do projeto segue uma separação clara entre criação, semeadura e consultas, facilitando a manutenção e leitura:
 
-```text```
 📦 e-cards-sql
  ┣ 📂 db_scripts
  ┃ ┣ 📂 tables
