@@ -58,7 +58,7 @@ A organização do projeto segue uma separação clara entre criação, semeadur
  ┃ ┗ 📂 prompts
  ┃   ┗ 📄 tcf_cards.txt
  ┗ 📄 README.md
-´´´
+```
 ---
 
 ## 🗂️Modelo de Dados
