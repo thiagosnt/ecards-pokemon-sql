@@ -58,10 +58,10 @@ A organização do projeto segue uma separação clara entre criação, semeadur
  ┃ ┗ 📂 prompts
  ┃   ┗ 📄 tcf_cards.txt
  ┗ 📄 README.md
-
+´´´
 ---
 
-## 🗂️ Modelo de Dados
+## 🗂️Modelo de Dados
 O banco de dados é composto pelas seguintes tabelas:
 
 tbl_collections → Coleções de cartas
