@@ -40,8 +40,6 @@ O repositório demonstra, de forma prática, como a Inteligência Artificial pod
 
 ## 📁 Estrutura do Projeto
 
-```markdown
-```text
 📦 e-cards-sql
  ┣ 📂 db_scripts
  ┃ ┣ 📂 tables
