@@ -64,84 +64,38 @@ A organização do projeto segue uma separação clara entre criação, semeadur
 ## 🗂️Modelo de Dados
 O banco de dados é composto pelas seguintes tabelas:
 
-tbl_collections → Coleções de cartas
+- tbl_collections → Coleções de cartas
 
-tbl_types → Tipos das cartas
+- tbl_types → Tipos das cartas
 
-tbl_stages → Estágios das cartas
+- tbl_stages → Estágios das cartas
 
-tbl_cards → Cartas e seus relacionamentos
+- tbl_cards → Cartas e seus relacionamentos
 
 🔗 Relacionamentos (Chaves Estrangeiras)
-tbl_cards.collection_id → tbl_collections.id
+- tbl_cards.collection_id → tbl_collections.id
 
-tbl_cards.type_id → tbl_types.id
+- tbl_cards.type_id → tbl_types.id
 
-tbl_cards.stage_id → tbl_stages.id
+- tbl_cards.stage_id → tbl_stages.id
 
 ---
 
 ## 🤖 Uso do Microsoft Copilot
 Durante o desenvolvimento, o Microsoft Copilot foi utilizado diretamente no VS Code para:
 
-Sugerir consultas SELECT.
+- Sugerir consultas SELECT.
 
-Criar JOINs complexos entre tabelas relacionadas.
+- Criar JOINs complexos entre tabelas relacionadas.
 
-Gerar consultas de validação de integridade utilizando NOT EXISTS.
+- Gerar consultas de validação de integridade utilizando NOT EXISTS.
 
-Melhorar a legibilidade e a organização do código SQL.
+- Melhorar a legibilidade e a organização do código SQL.
 
-Auxiliar na separação de responsabilidades dos scripts.
+- Auxiliar na separação de responsabilidades dos scripts.
 
 ⚠️ Nota: O Copilot foi usado como um apoio de produtividade, e não como substituto do raciocínio lógico ou do conhecimento fundamental em SQL.
 
----
-
-## 🔍 Exemplos de Consultas SQL
-🃏 Consulta completa (Cartas com seus relacionamentos)
-SQL
-SELECT
-    c.name,
-    c.hp,
-    c.attack,
-    c.damage,
-    c.weak,
-    c.resistence,
-    c.retreat,
-    col.collectionSetName,
-    t.typeName,
-    s.stageName
-FROM tbl_cards c
-JOIN tbl_collections col ON col.id = c.collection_id
-JOIN tbl_types t ON t.id = c.type_id
-JOIN tbl_stages s ON s.id = c.stage_id
-ORDER BY col.collectionSetName, c.name;
-
----
-
-## 📦 Contagem de cartas por coleção
-SQL
-SELECT
-    col.collectionSetName,
-    COUNT(*) AS total_cards
-FROM tbl_cards c
-JOIN tbl_collections col ON col.id = c.collection_id
-GROUP BY col.collectionSetName
-ORDER BY col.collectionSetName;
-🧪 Validação de integridade (Verificação de FKs órfãs)
-SQL
-SELECT *
-FROM tbl_cards c
-WHERE NOT EXISTS (
-    SELECT 1 FROM tbl_collections col WHERE col.id = c.collection_id
-)
-OR NOT EXISTS (
-    SELECT 1 FROM tbl_types t WHERE t.id = c.type_id
-)
-OR NOT EXISTS (
-    SELECT 1 FROM tbl_stages s WHERE s.id = c.stage_id
-);
 
 ---
 
