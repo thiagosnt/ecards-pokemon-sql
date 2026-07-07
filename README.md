@@ -33,7 +33,6 @@ O repositório demonstra, de forma prática, como a Inteligência Artificial pod
 
 - **PostgreSQL / SQL**
 - **Microsoft Copilot**
-- **Visual Studio Code**
 - **PowerShell** (Automação de Migrations)
 - **Git / GitHub**
 
