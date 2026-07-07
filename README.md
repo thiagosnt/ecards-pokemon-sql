@@ -38,26 +38,6 @@ O repositório demonstra, de forma prática, como a Inteligência Artificial pod
 
 ---
 
-## 📁 Estrutura do Projeto
-
-- 📦 e-cards-sql
-- ┣ 📂 db_scripts
-- ┃ ┣ 📂 tables
-- ┃ ┃ ┗ 📄 001_create_card_table.sql
-- ┃ ┣ 📂 seeds
-- ┃ ┃ ┣ 📄 001_initial_seeds_cards.sql
-- ┃ ┃ ┣ 📄 002_bulk_seeds_cards.sql
-- ┃ ┃ ┣ 📄 003_bulk_seeds_cards.sql
-- ┃ ┃ ┣ 📄 004_bulk_seeds_cards.sql
-- ┃ ┃ ┗ 📄 to_migration.ps1
-- ┃ ┣ 📂 selects
-- ┃ ┃ ┗ 📄 001-cards-selects.sql
-- ┃ ┗ 📂 prompts
-- ┃   ┗ 📄 tcf_cards.txt
-  ┗ 📄 README.md
-
----
-
 ## 🗂️Modelo de Dados
 O banco de dados é composto pelas seguintes tabelas:
 
